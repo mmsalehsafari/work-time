@@ -1,9 +1,9 @@
 <?/*این صفحه قسمت html مربوط به pagination را برای javascript تامین می کند*/?>
-<?= pagination('/notes-v2/note/catalog', 2, 'btn btn-blue', 'btn', $pageIndex, $pageCount); ?>
+<?= pagination('/time/note/catalog', 2, 'btn btn-blue', 'btn', $pageIndex, $pageCount); ?>
 <hr>
 <br>
 <br>
-<?= pagination('/notes-v2/note/catalog', 2, 'btn btn-blue', 'btn', $pageIndex, $pageCount, 'getPage'); ?> <?/*این کد مربوط به مقدار دهی کردن تابع pagination مربوط به javascript است*/?>
+<?= pagination('/time/note/catalog', 2, 'btn btn-blue', 'btn', $pageIndex, $pageCount, 'getPage'); ?> <?/*این کد مربوط به مقدار دهی کردن تابع pagination مربوط به javascript است*/?>
 <hr>
 <br>
 <br>
@@ -37,11 +37,11 @@
   <br>
   <br>
   <div class="tal">
-    <a href="/notes-v2/note/submit" class="btn-blue">درج یادآور</a>
+    <a href="/time/note/submit" class="btn-blue">درج یادآور</a>
   </div>
 </div>
 
-<?= pagination('/notes-v2/note/catalog', 2, 'btn btn-blue', 'btn', $pageIndex, $pageCount, 'getPage'); ?>
+<?= pagination('/time/note/catalog', 2, 'btn btn-blue', 'btn', $pageIndex, $pageCount, 'getPage'); ?>
 <hr>
 <br>
 <br>

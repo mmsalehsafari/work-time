@@ -46,7 +46,7 @@
   <br>
   <br>
   <br>
-      <a href="/notes-v2/note/submit" class="btn-blue">درج یادآور</a><?/*با زدن دکمه «درج یادآور» ما به دایرکتوری کنترلر ، note.php منتقل می شویم و تابع submit اجر میشود*/?>
+      <a href="/time/note/submit" class="btn-blue">درج یادآور</a><?/*با زدن دکمه «درج یادآور» ما به دایرکتوری کنترلر ، note.php منتقل می شویم و تابع submit اجر میشود*/?>
     </div>
   <? } ?>
 </div>
@@ -56,7 +56,7 @@
     sender = $(sender);
     var parent = sender.parentsUntil('.todo-entry').parent();/*همین طور میاد در پدرش عقب یعنی میاد اول سراغ li ، بعدش سراغ doneClass و تو دو اینتری ولی ul را در نظر نمی گیرد لذا باید یک پرنت دیگر بنویسیم تا آنرا هم حساب کند*/
 
-    $.ajax('/notes-v2/note/toggle/' + noteId, {
+    $.ajax('/time/note/toggle/' + noteId, {
       type: 'post',
       dataType: 'json',
       success: function(data) {
@@ -75,7 +75,7 @@
     sender = $(sender);
     var parent = sender.parentsUntil('.todo-entry').parent();
 
-    $.ajax('/notes-v2/note/remove/' + noteId, {
+    $.ajax('/time/note/remove/' + noteId, {
       type: 'post',
       dataType: 'json',
       success: function(data) {

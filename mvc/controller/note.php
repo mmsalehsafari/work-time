@@ -15,14 +15,14 @@ class NoteController {/*این کنترلر کارهای مربوط به ثبت 
     $description = $_POST['description'];
 
     if (!isset($_SESSION['user_id'])){/*اگر یوزر آیدی کاربر ما ست نشده بود*/
-      header("Location: /notes-v2/page/home");/*ما را به دایرکتوری کنترلر ، فایل page.php هدایت کرده و تابع home  را اجرا می کند*/
+      header("Location: /time/page/home");/*ما را به دایرکتوری کنترلر ، فایل page.php هدایت کرده و تابع home  را اجرا می کند*/
       exit;
     }
 
     $userId = $_SESSION['user_id'];/*یوزر آیدی کابر ما را در داخل متغیر userId می ریزد*/
 
     NoteModel::insert($title, $description, $userId);/*براساس یوزرآیدی کاربر عنوان و یادداشت او را به سمت دیتابیس می فرستد*/
-    header("Location: /notes-v2/page/home");/*و در پایان ما را به دایرکتوری کنترلر ، فایل page.php و تابع home هدایت می کند*/
+    header("Location: /time/page/home");/*و در پایان ما را به دایرکتوری کنترلر ، فایل page.php و تابع home هدایت می کند*/
   }
 
   public function remove($noteId){/*متغیر نوت آیدی را می گیرد و براساس آن اقدام به حذف یادداشت های کاربر می کند*/

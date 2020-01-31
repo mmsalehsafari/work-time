@@ -10,7 +10,7 @@
 
 <script>
   function getPage(pageIndex){/*کار این تابع */
-    $.ajax('/notes-v2/note/ajaxCatalog/' + pageIndex, {/*این تابع ما را به دایرکتوری زردنگ و فولدر کنترلر و بعدش فایل note.php وبعدش تابع ajaxCatalog هدایت می کند و در پایان شماره صفحه را هم اضافه می کند*/
+    $.ajax('/time/note/ajaxCatalog/' + pageIndex, {/*این تابع ما را به دایرکتوری زردنگ و فولدر کنترلر و بعدش فایل note.php وبعدش تابع ajaxCatalog هدایت می کند و در پایان شماره صفحه را هم اضافه می کند*/
       type: 'post',
       dataType: 'json',
       success: function(data){
@@ -23,7 +23,7 @@
     sender = $(sender);
     var parent = sender.parentsUntil('.todo-entry').parent();
 
-    $.ajax('/notes-v2/note/toggle/' + noteId, {
+    $.ajax('/time/note/toggle/' + noteId, {
       type: 'post',
       dataType: 'json',
       success: function(data) {
@@ -42,7 +42,7 @@
     sender = $(sender);
     var parent = sender.parentsUntil('.todo-entry').parent();
 
-    $.ajax('/notes-v2/note/remove/' + noteId, {
+    $.ajax('/time/note/remove/' + noteId, {
       type: 'post',
       dataType: 'json',
       success: function(data) {
