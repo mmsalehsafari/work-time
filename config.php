@@ -5,7 +5,7 @@ global $config;
 $config['db']['host'] = 'localhost';
 $config['db']['user'] = 'armaxir';
 $config['db']['pass'] = '1234';
-$config['db']['name'] = 'armaxir_notes';
+$config['db']['name'] = 'armaxir_time';
 
 $config['lang'] = 'fa';
 
@@ -15,5 +15,7 @@ $config['base'] = '/time';/*با نوشتن این کد ما همه جا می ت
 $config['route'] = array(/*این کانفیگ برای ایجاد alias استفاده می شود*/
   '/login' => '/user/login',/*میگه که اگه ما در url نوشتیم login تو در اصل برای ما همون user/login/ را اجرا کن که قبلا اجرا می کردی*/
   '/profile' => '/user/profile',
+  '/register' => '/user/register',
+  '/home' => '/page/home',
   '/ورود' => '/user/login',
 );

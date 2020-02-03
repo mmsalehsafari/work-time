@@ -1,10 +1,10 @@
 <?php
 class UserModel {/*کار این کنترلر امور دیتابیسی مربوط به یوزر است که اطلاعات یوزر و ... را می گیرد و به کنترلر می فرستد*/
-  public static function insert($email, $name, $nickname, $password, $time1, $time){
+  public static function insert($email, $userName, $mobileNumber, $password, $time1, $time){
     $db = Db::getInstance();
     $db->insert("INSERT INTO x_user
-      (  email,  fullname,  nickname,    password, registerTime, lastVisitTime) VALUES
-      ('$email', '$name', '$nickname', '$password',  '$time1',     '$time')"
+      (  email,  userName,  mobileNumber,    password, registerTime, lastVisitTime) VALUES
+      ('$email', '$userName', '$mobileNumber', '$password',  '$time1',     '$time')"
     );
   }/*این یک قرارداد است که ما همیشه تابع های مدل را استاتیک و تابع های کنترلر را نان استاتیک در می نویسیم باز به آموزش مراجعه شود*/
 

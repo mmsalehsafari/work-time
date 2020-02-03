@@ -9,9 +9,13 @@ class NoteController {/*این کنترلر کارهای مربوط به ثبت 
       View::render("/note/submit.php");/*در صورتی که یادداشتی پست نشده بود این دستور فقط فرم یادداشت را به کاربر نشان می دهد*/
     }
   }
-
+  /*$title == day*/
   private function submitNote(){/*کار این تابع ایجاد یادداشت است*/
+    $dates = $_POST['dates'];
     $title = $_POST['title'];
+    $entertime = $_POST['entertime'];
+    $exittime = $_POST['exittime'];
+    $worktime = $exittime - $entertime;
     $description = $_POST['description'];
 
     if (!isset($_SESSION['user_id'])){/*اگر یوزر آیدی کاربر ما ست نشده بود*/
@@ -21,7 +25,7 @@ class NoteController {/*این کنترلر کارهای مربوط به ثبت 
 
     $userId = $_SESSION['user_id'];/*یوزر آیدی کابر ما را در داخل متغیر userId می ریزد*/
 
-    NoteModel::insert($title, $description, $userId);/*براساس یوزرآیدی کاربر عنوان و یادداشت او را به سمت دیتابیس می فرستد*/
+    NoteModel::insert($dates, $title, $entertime, $exittime, $worktime,$description, $userId);/*براساس یوزرآیدی کاربر عنوان و یادداشت او را به سمت دیتابیس می فرستد*/
     header("Location: /time/page/home");/*و در پایان ما را به دایرکتوری کنترلر ، فایل page.php و تابع home هدایت می کند*/
   }
 

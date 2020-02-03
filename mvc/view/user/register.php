@@ -7,8 +7,8 @@
     <input type="password" class="ltr" placeholder="<?=_ph_password?>" name="password1"><br>
     <input type="password" class="ltr" placeholder="<?=_ph_confirm_password?>" name="password2"><br>
     <br>
-    <input type="text" placeholder="<?=_ph_name?>" name="name"><br>
-    <input type="text" placeholder="<?=_ph_nickname?>" name="nickname"><br>
+    <input type="text" class="ltr" placeholder="<?=_ph_user_name?>" name="username"><br>
+    <input type="text" class="ltr" placeholder="<?=_ph_mobile_number?>" name="mobileNumber"><br>
     <br>
     <br>
     <button type="submit" class="btn-blue"><?=_btn_register?></button>

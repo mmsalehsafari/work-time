@@ -59,8 +59,8 @@ class UserController {/*این کنترلر کارهای مربوط به یوز�
     $email = $_POST['email'];
     $password1 = $_POST['password1'];
     $password2 = $_POST['password2'];
-    $name = $_POST['name'];
-    $nickname = $_POST['nickname'];
+    $userName = $_POST['username'];
+    $mobileNumber = $_POST['mobileNumber'];
     $time = getCurrentDateTime();
 
     $record = UserModel::fetch_by_email($email);
@@ -77,7 +77,7 @@ class UserController {/*این کنترلر کارهای مربوط به یوز�
     }
 
 
-    UserModel::insert($email, $name, $nickname, $password1, $time, $time);
+    UserModel::insert($email, $userName, $mobileNumber, $password1, $time, $time);
 
     message('success', _successfully_registered);
   }

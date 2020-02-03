@@ -20,33 +20,36 @@
     </div>
   <? } else { ?>
     <ul class="todo-entry">
-      <li>انجام</li>
+      <li>تاریخ</li>
+      <li>روز</li>
+      <li>زمان ورود</li>
+      <li>زمان خروج</li>
+      <li>ساعت کار</li>
+      <li>کار</li>
       <li>حذف</li>
-      <li>عنوان</li>
-      <li>توضیحات</li>
-      <li>زمان وقوع</li>
     </ul>
 
-    <? if ($records == null){ $records = array(); } ?>
+  <? if ($records == null){ $records = array(); } ?>
     <? foreach ($records as $record){/*می آید رکوردهای ما در دیتا بیس را بررسی می کند*/
-      if ($record['isDone']){/*به عبارت داخل ستون isDone در داخل دیتابیس ما نگاه می کند که دو حالت دارد که یا done است و یا pending*/
-        $doneClass = "done";
-      } else {
-        $doneClass = "pending";
-      }
-      ?>
-      <ul class="todo-entry <?=$doneClass?>"><?/*متناسب با اینکه که ستون isDone ، انجام شده(done) و یا pending باشد کلاس مربوطه را با رنگ آمیزی برای آن سطر لحاظ می کند*/?>
-        <li><span onclick="noteToggle(this, <?=$record['note_id']?>)" class="btn">*</span></li><?/*وقتی که روی دکمه انجام کلیک کنیم ، دستورات تابع noteToggle را اجرا می کند*/?>
-        <li><span onclick="noteRemove(this, <?=$record['note_id']?>)" class="btn">-</span></li><?/*وقتی که روی دکمه remove کلیک میکنیم به عنوان متغیر اول می گوید که ریمو بوده که کلیک کرده و برای متغیر دوم نوت آیدی یادداشت را می فرستد برای تابع پایین*/?>
-        <li><?=$record['title']?></li>
-        <li><?=$record['description']?></li>
-        <li><?=jdate($record['eventTime'], 'd M Y')?></li><?/*تاریخ و زمان ثبت یادداشت را با استفاده از تابع jdate به دیتا بیس ما منتقل می کندو ما در قسمت دوم می توانیم فرمت نمایش را تعیین کنیم*/?>
-      </ul>
-    <? } ?>
-  <br>
-  <br>
-  <br>
-      <a href="/time/note/submit" class="btn-blue">درج یادآور</a><?/*با زدن دکمه «درج یادآور» ما به دایرکتوری کنترلر ، note.php منتقل می شویم و تابع submit اجر میشود*/?>
+  if ($record['isDone']){/*به عبارت داخل ستون isDone در داخل دیتابیس ما نگاه می کند که دو حالت دارد که یا done است و یا pending*/
+  $doneClass = "done";
+  } else {
+  $doneClass = "pending";
+  }
+  ?>
+  <ul class="todo-entry <?=$doneClass?>"><?/*متناسب با اینکه که ستون isDone ، انجام شده(done) و یا pending باشد کلاس مربوطه را با رنگ آمیزی برای آن سطر لحاظ می کند*/?>
+    <li><?=$record['dates']?></li><?/*تاریخ و زمان ثبت یادداشت را با استفاده از تابع jdate به دیتا بیس ما منتقل می کندو ما در قسمت دوم می توانیم فرمت نمایش را تعیین کنیم*/?>
+    <li><?=$record['title']?></li>
+    <li><?=$record['enterTime']?></li>
+    <li><?=$record['exitTime']?></li>
+    <li><?=$record['workTime']?></li>
+    <li><?=$record['description']?></li>
+    <li><span onclick="noteRemove(this, <?=$record['note_id']?>)" class="btn">-</span></li><?/*وقتی که روی دکمه remove کلیک میکنیم به عنوان متغیر اول می گوید که ریمو بوده که کلیک کرده و برای متغیر دوم نوت آیدی یادداشت را می فرستد برای تابع پایین*/?>
+  </ul>
+  <? } ?>
+<br>
+<br>
+  <a href="/time/note/submit" class="btn-blue">درج گزارش</a><?/*با زدن دکمه «درج یادآور» ما به دایرکتوری کنترلر ، note.php منتقل می شویم و تابع submit اجر میشود*/?>
     </div>
   <? } ?>
 </div>

@@ -18,6 +18,6 @@ define('_btn_signup', "ساخت حساب جدید");
 define('_ph_email', "ایمیل");
 define('_ph_password', "رمز عبور");
 define('_ph_confirm_password', "تکرار رمز عبور");
-define('_ph_name', "نام کامل");
-define('_ph_nickname', "نام مستعار");
+define('_ph_user_name', "نام کاربری");
+define('_ph_mobile_number', "شماره موبایل");
 ?>

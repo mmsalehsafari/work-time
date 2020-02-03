@@ -1,10 +1,9 @@
 <?php
 class NoteModel {/*در اینجا تمام کارهای دیتابیسی مربوط به یادداشت را انجام می دهد*/
-  public static function insert($title, $description, $userId){/*اطلاعات یادداشت و عنوان را برای ما در دیتابیس ثبت می کند*/
+  public static function insert($dates, $title, $entertime, $exittime, $worktime, $description, $userId){/*اطلاعات یادداشت و عنوان را برای ما در دیتابیس ثبت می کند*/
     $db = Db::getInstance();
-    $db->insert("INSERT INTO x_note (title, description, user_id, isDone) VALUES ('$title', '$description', '$userId', false )");
+    $db->insert("INSERT INTO x_note (dates ,title, enterTime, exitTime, workTime, description, user_id, isDone) VALUES ('$dates', '$title', '$entertime', '$exittime', '$worktime', '$description', '$userId', false )");
   }
-
   public static function remove($noteId, $userId){/*باتوجه به دو متغیر نوت آیدی و یوزر آیدی که دریافت می کند اقدام به حذف یادداشت مربوط به آنها می کند*/
     $db = Db::getInstance();
     $db->modify("DELETE FROM x_note WHERE note_id=$noteId AND user_id=$userId");
