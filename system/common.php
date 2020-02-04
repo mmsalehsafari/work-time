@@ -76,6 +76,13 @@ function message($type, $message, $mustExit = false) {/*این تابع براس
   }
 }
 
+function post ($field , $default = null){
+  if (isset($_POST[$field])){
+    return $_POST[$field];
+  }
+  return $default;
+}
+
 function twoDigitNumber($number){/*کار این تابع این است که برای روزهای زیر 10 ، آنها را با صفر(06 مثلا)نمایش می دهد*/
   return ($number < 10) ? $number = "0" . $number : $number;/*داره میگه که اگه متغیر number ما کوچکتر از 10 بود یه صفر بچسبون به اولش در غیر این صورت خودشو خروجی بده*/
 }

@@ -76,6 +76,10 @@ class UserController {/*این کنترلر کارهای مربوط به یوز�
       message('fail', _password_not_match, true);
     }
 
+    if ($userName == null){
+      message('fail' , _user_name_not_get);
+    }
+
 
     UserModel::insert($email, $userName, $mobileNumber, $password1, $time, $time);
 

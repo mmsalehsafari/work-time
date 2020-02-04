@@ -8,5 +8,6 @@ require_once(getcwd() . '/system/core.php');/*تایعget_cwd() به ما می �
 require_once(getcwd() . '/system/common.php');
 require_once(getcwd() . '/system/db.php');
 require_once(getcwd() . '/system/view.php');
+require_once(getcwd() . '/system/net.php');
 require_once(getcwd() . '/locale/' . $config['lang'] . '.php');
 ?>

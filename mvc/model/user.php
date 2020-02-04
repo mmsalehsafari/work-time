@@ -13,4 +13,12 @@ class UserModel {/*کار این کنترلر امور دیتابیسی مربو
     $record = $db->first("SELECT * FROM x_user WHERE email='$email'");
     return $record;
   }
+  public static function exist_email($email){
+    $db = Db::getInstance();
+    $record = $db->first("SELECT email FROM x_user WHERE email='$email'");
+    if ($record == null){
+      echo "not exist";
+    }
+    return $record;
+  }
 }

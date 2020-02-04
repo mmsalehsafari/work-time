@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/locale/fa.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mvc/controller/note.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mvc/controller/test.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mvc/controller/webservice.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mvc/controller/wstester.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mvc/view/note/submit.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mvc/view/page/ajaxCatalog.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mvc/view/page/catalog.php" charset="UTF-8" />

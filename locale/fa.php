@@ -6,6 +6,7 @@ define('_already_registered', "شما پیشتر ثبت نام کرده اید،
 define('_already_logged_in', 'شما هم اکنون وارد شده اید <a href="' . baseUrl() . '/page/home">ورود به صفحه اصلی</a> یا <a href="' . baseUrl() . '/user/logout">خروج از حساب</a><br><br>ایمیل شما: ');
 define('_weak_password', "پسورد به اندازه کافی قوی نمی باشد");
 define('_password_not_match', "پسورد ها با هم مطابقت ندارند");
+define('_user_name_not_get', "شما username خود را وارد نکرده اید");
 define('_successfully_registered', 'شما با موفقیت ثبت نام شدید،<a href="' . baseUrl() . '/user/login">ورود به سایت</a>');/*در این می رود به دایرکتوری فریم ورک بعد به MVC و بعد از آنجا فایل user.php را می خواند و بعدش تابع login را اجرا می کند*/
 define('_header_welcome', "خوش آمدید");
 define('_header_guest', "کاربر مهمان");
